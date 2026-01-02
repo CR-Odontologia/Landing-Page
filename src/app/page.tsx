@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import AboutUs from "@/components/sections/AboutUs";
 import Programs from "@/components/sections/Programs";
 import ContactForm from "@/components/sections/FormContact";
+import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
@@ -12,8 +13,7 @@ export default function Home() {
         <AboutUs/>
         <Programs/>
         <ContactForm/>
-        <div className="h-[200vh]"> {}
-        </div>
+        <Footer/>
       </main>
   );
 }
