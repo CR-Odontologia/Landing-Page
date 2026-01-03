@@ -16,11 +16,11 @@ const Programs = () => {
             description: "Actualización continua para el profesional moderno."
         },
         {
-            title: "ESPECIALIZACIONES",
+            title: "DIPLOMADOS",
             subtitle: "CONOCE NUESTRAS",
             image: "/images/placeholder.webp",
-            href: "/especializaciones",
-            description: "Formación de postgrado con certificación internacional."
+            href: "/diplomados",
+            description: "Formación de especialidades con certificación internacional."
         }
     ];
 

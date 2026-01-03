@@ -42,7 +42,7 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-[#d7af58]">Enlaces</h4>
                         <ul className="space-y-3">
-                            {["Inicio", "Cursos", "Especialidades", "Nosotros"].map((item) => (
+                            {["Inicio", "Cursos", "Diplamdos", "Nosotros"].map((item) => (
                                 <li key={item}>
                                     <Link href={`/${item.toLowerCase()}`} className="text-gray-300 hover:text-white text-sm flex items-center gap-2">
                                         <ChevronRight size={14} />

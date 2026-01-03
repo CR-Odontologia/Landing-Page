@@ -11,7 +11,7 @@ const Navbar = () => {
 
     const navLinks = [
         { title: "CURSOS", href: "/cursos" },
-        { title: "ESPECIALIZACIONES", href: "/especializaciones" },
+        { title: "DIPLOMADOS", href: "/diplomados" },
     ];
 
     return (
