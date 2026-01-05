@@ -1,10 +1,9 @@
 import Navbar from "@/components/nav/NavBar";
 import Hero from "@/components/sections/Hero";
 import AboutUs from "@/components/sections/AboutUs";
-import Programs from "@/components/sections/Programs";
-import ContactForm from "@/components/sections/FormContact";
 import Footer from "@/components/sections/Footer";
 import PastEditions from "@/components/sections/PastEditions";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
         <Hero/>
         <AboutUs/>
         <PastEditions/>
-        <ContactForm/>
+        <Contact/>
         <Footer/>
       </main>
   );
