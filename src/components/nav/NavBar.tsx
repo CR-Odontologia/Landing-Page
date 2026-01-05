@@ -10,8 +10,11 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
+        { title: "INSTITUCIÓN", href: "/institucion" },
+        { title: "STAFF", href: "/staff" },
         { title: "CURSOS", href: "/cursos" },
         { title: "DIPLOMADOS", href: "/diplomados" },
+        { title: "ASESORIAS", href: "/asesorias" }
     ];
 
     return (
