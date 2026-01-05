@@ -26,23 +26,26 @@ const Footer = () => {
                             Excelencia en servicios odontológicos y formación académica especializada.
                         </p>
                         <div className="flex items-center space-x-4">
-                            <a href="#" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors">
+                            <a href="https://www.facebook.com/profile.php?id=61585492244061" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors">
                                 <Facebook size={18} />
                             </a>
-                            <a href="#" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors">
+                            <a href="https://www.instagram.com/crformacion/" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors">
                                 <Instagram size={18} />
                             </a>
-                            <a href="#" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors">
+                            <a href="https://wa.me/+51982897557" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors">
                                 <MessageCircle size={18} />
                             </a>
                         </div>
                     </div>
 
                     {/* 2. NAVEGACIÓN */}
+
+
+
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-[#d7af58]">Enlaces</h4>
                         <ul className="space-y-3">
-                            {["Inicio", "Cursos", "Diplamdos", "Nosotros"].map((item) => (
+                            {["Conocenos", "Cursos", "Diplomados", "Asesorias"].map((item) => (
                                 <li key={item}>
                                     <Link href={`/${item.toLowerCase()}`} className="text-gray-300 hover:text-white text-sm flex items-center gap-2">
                                         <ChevronRight size={14} />
@@ -65,6 +68,10 @@ const Footer = () => {
                                 <Phone size={18} className="text-[#d7af58]" />
                                 <span>+51 982 897 557</span>
                             </li>
+                            <li className="flex items-center gap-3 text-sm text-gray-300">
+                                <Mail size={18} className="text-[#d7af58]" />
+                                <span>informes@crodontologia.com</span>
+                            </li>
                         </ul>
                     </div>
 
@@ -74,12 +81,14 @@ const Footer = () => {
                         <div className="space-y-4">
                             <Link href="/politicas" className="block text-sm text-gray-300 hover:text-white">Politicas de privacidad</Link>
                             <Link href="/terminos" className="block text-sm text-gray-300 hover:text-white">Términos y condiciones</Link>
+                            <Link href="/reclamaciones" className="block text-sm text-gray-300 hover:text-white">Libro de reclamaciones</Link>
 
-                            {/* Libro de Reclamaciones con fondo blanco para que resalte */}
+                            {/* Libro de Reclamaciones con fondo blanco para que resalte
                             <div className="bg-white p-3 rounded-xl flex items-center gap-3 mt-4">
                                 <img src="images/libro.png" alt="Libro" className="h-6" />
                                 <span className="text-[#022249] text-[9px] font-black uppercase leading-tight">Libro de<br/>Reclamaciones</span>
                             </div>
+                            */}
                         </div>
                     </div>
 
