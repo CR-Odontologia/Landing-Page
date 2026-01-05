@@ -10,27 +10,8 @@ const AboutUs = () => {
         <section className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                {/* CONTENEDOR PRINCIPAL: Grid de 2 columnas */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                    {/* COLUMNA IZQUIERDA: Imagen del Equipo */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl"
-                    >
-                        <Image
-                            src="/images/placeholder.webp" // Asegúrate de tener esta foto en public/images/
-                            alt="Nuestro equipo de trabajo"
-                            fill
-                            className="object-cover"
-                        />
-                        {/* Decoración: Un borde dorado sutil que sobresale */}
-                        <div className="absolute -bottom-4 -right-4 w-32 h-32 border-b-8 border-r-8 border-brand-gold -z-10" />
-                    </motion.div>
-
-                    {/* COLUMNA DERECHA: Texto y Valores */}
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -47,7 +28,6 @@ const AboutUs = () => {
                             </p>
                         </div>
 
-                        {/* Misión y Visión */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="p-6 bg-gray-50 rounded-xl border-l-4 border-brand-blue">
                                 <Target className="text-brand-blue mb-3" size={32} />
@@ -61,7 +41,6 @@ const AboutUs = () => {
                             </div>
                         </div>
 
-                        {/* Valores Rápidos */}
                         <div className="flex items-center gap-8 pt-4 border-t border-gray-100">
                             <div className="flex items-center gap-2">
                                 <ShieldCheck className="text-brand-blue" size={24} />
@@ -74,6 +53,20 @@ const AboutUs = () => {
                         </div>
                     </motion.div>
 
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl"
+                    >
+                        <Image
+                            src="/images/placeholder.webp"
+                            alt="Nuestro equipo de trabajo"
+                            fill
+                            className="object-cover"
+                        />
+                        <div className="absolute -bottom-4 -right-4 w-32 h-32 border-b-8 border-r-8 border-brand-gold -z-10" />
+                    </motion.div>
                 </div>
             </div>
         </section>
