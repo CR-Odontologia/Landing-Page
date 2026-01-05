@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import Navbar from "@/components/nav/NavBar";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import Footer from "@/components/sections/Footer";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -22,7 +25,10 @@ export default function RootLayout({
     return (
         <html lang="es"> {}
         <body className={`${montserrat.variable} font-sans antialiased text-brand-dark`}>
+        <Navbar/>
         {children}
+        <WhatsAppButton/>
+        <Footer/>
         </body>
         </html>
     );
