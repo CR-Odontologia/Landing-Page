@@ -1,28 +1,70 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 const slides = [
-    { id: 1, src: "/images/placeholder.webp", title: "Example", highlight: "Curso 1" },
-    { id: 2, src: "/images/placeholder.webp", title: "Example", highlight: "Curso 2" },
+    {
+        id: 1,
+        src: "/images/placeholder.webp",
+        tag: "Curso virtual",
+        title: "Práctica Clínica en Endodoncia",
+        description: "Imagenología Diagnóstica Avanzada para la práctica diaria. Aprende las técnicas más modernas con especialistas certificados.",
+        slug: "endodoncia-avanzada"
+    },
+    {
+        id: 2,
+        src: "/images/placeholder.webp",
+        tag: "Diplomado",
+        title: "Ortodoncia Interceptiva",
+        description: "Domina el diagnóstico temprano y tratamiento de maloclusiones en dentición mixta.",
+        slug: "ortodoncia-interceptiva"
+    },
+    {
+        id: 3,
+        src: "/images/placeholder.webp",
+        tag: "Curso virtual",
+        title: "Práctica Clínica en Endodoncia",
+        description: "Imagenología Diagnóstica Avanzada para la práctica diaria. Aprende las técnicas más modernas con especialistas certificados.",
+        slug: "endodoncia-avanzada"
+    },
+    {
+        id: 4,
+        src: "/images/placeholder.webp",
+        tag: "Diplomado",
+        title: "Ortodoncia Interceptiva",
+        description: "Domina el diagnóstico temprano y tratamiento de maloclusiones en dentición mixta.",
+        slug: "ortodoncia-interceptiva"
+    },
 ];
 
 const Hero = () => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
-    const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
-    const scrollNext = () => emblaApi && emblaApi.scrollNext();
+    const onSelect = useCallback(() => {
+        if (!emblaApi) return;
+        setSelectedIndex(emblaApi.selectedScrollSnap());
+    }, [emblaApi]);
+
+    useEffect(() => {
+        if (!emblaApi) return;
+        onSelect();
+        emblaApi.on("select", onSelect);
+    }, [emblaApi, onSelect]);
+
+    const currentSlide = slides[selectedIndex];
 
     return (
-        <section className="relative w-full">
-            <div className="overflow-hidden" ref={emblaRef}>
-                <div className="flex">
+        <section className="relative w-full bg-white pb-20 md:pb-32">
+            <div className="relative h-[500px] md:h-[650px] w-full overflow-hidden" ref={emblaRef}>
+                <div className="flex h-full">
                     {slides.map((slide) => (
-                        <div className="relative flex-[0_0_100%] min-w-0 h-[500px] md:h-[600px]" key={slide.id}>
+                        <div className="relative flex-[0_0_100%] min-w-0 h-full" key={slide.id}>
                             <Image
                                 src={slide.src}
                                 alt={slide.title}
@@ -30,32 +72,61 @@ const Hero = () => {
                                 className="object-cover"
                                 priority
                             />
-                            <div className="absolute inset-0 bg-brand-blue/40 mix-blend-multiply" />
-
-                            <div className="absolute inset-0 flex flex-col justify-center px-10 md:px-32 text-white">
-                                <p className="text-xl md:text-2xl font-light tracking-widest uppercase">
-                                    {slide.title}
-                                </p>
-                                <h1 className="text-6xl md:text-8xl font-black leading-none italic">
-                                    {slide.highlight}
-                                </h1>
-                            </div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <button onClick={scrollPrev} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 border border-white rounded-full text-white hover:bg-white/20 transition-all">
-                <ChevronLeft size={30} />
-            </button>
-            <button onClick={scrollNext} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 border border-white rounded-full text-white hover:bg-white/20 transition-all">
-                <ChevronRight size={30} />
-            </button>
+            <div className="absolute top-[320px] md:top-[380px] left-0 w-full z-40 pointer-events-none">
+                <div className="max-w-7xl mx-auto px-4 md:px-12">
+                    <div className="pointer-events-auto max-w-sm md:max-w-md bg-white p-8 md:p-10 rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
 
-            <div className="w-full bg-[#5a5a5a] py-6 text-center">
-                <h2 className="text-white text-lg md:text-2xl font-bold tracking-[0.2em] uppercase">
-                    Con los mejores especialistas
-                </h2>
+                        {/* Tag superior */}
+                        <span className="text-[#d7af58] font-bold text-xs uppercase tracking-[0.2em] block mb-4 border-l-4 border-[#d7af58] pl-3">
+                {currentSlide.tag}
+            </span>
+
+                        <h2 className="text-[#d7af58] text-3xl md:text-4xl font-black leading-tight mb-5">
+                            {currentSlide.title}
+                        </h2>
+
+                        <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8">
+                            {currentSlide.description}
+                        </p>
+
+                        <Link
+                            href={`/cursos/${currentSlide.slug}`}
+                            className="flex items-center w-full bg-[#022249] group rounded-full overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1"
+                        >
+                            {/* Contenedor del Icono */}
+                            <div className="bg-[#d7af58] p-4 md:p-5 group-hover:brightness-110 transition-all">
+                                <ChevronRight className="text-white w-5 h-5 md:w-6 md:h-6" />
+                            </div>
+
+                            {/* Contenedor del Texto (flex-1 para ocupar el resto del espacio) */}
+                            <div className="flex-1 text-center pr-6 md:pr-10">
+                    <span className="text-white font-bold text-[10px] md:text-xs uppercase tracking-widest">
+                        ¡Conoce más a detalle!
+                    </span>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 mt-12 flex justify-end gap-3">
+                {slides.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => emblaApi?.scrollTo(index)}
+                        aria-label={`Ir al slide ${index + 1}`}
+                        className={`h-2.5 transition-all duration-500 rounded-full cursor-pointer outline-none ${
+                            index === selectedIndex
+                                ? "bg-[#022249] w-14 shadow-md"
+                                : "bg-[#022249]/60 w-3 hover:bg-brand-blue/40"
+                        }`}
+                    />
+                ))}
             </div>
         </section>
     );
