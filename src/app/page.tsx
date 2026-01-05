@@ -4,6 +4,7 @@ import AboutUs from "@/components/sections/AboutUs";
 import Programs from "@/components/sections/Programs";
 import ContactForm from "@/components/sections/FormContact";
 import Footer from "@/components/sections/Footer";
+import PastEditions from "@/components/sections/PastEditions";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <Navbar/>
         <Hero/>
         <AboutUs/>
-        <Programs/>
+        <PastEditions/>
         <ContactForm/>
         <Footer/>
       </main>
