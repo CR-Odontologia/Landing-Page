@@ -79,7 +79,7 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-[#d7af58]">Legal</h4>
                         <div className="space-y-4">
-                            <Link href="/politicas" className="block text-sm text-gray-300 hover:text-white">Politicas de privacidad</Link>
+                            <Link href="/politicas-de-privacidad" className="block text-sm text-gray-300 hover:text-white">Politicas de privacidad</Link>
                             <Link href="/terminos" className="block text-sm text-gray-300 hover:text-white">Términos y condiciones</Link>
                             <Link href="/reclamaciones" className="block text-sm text-gray-300 hover:text-white">Libro de reclamaciones</Link>
 
