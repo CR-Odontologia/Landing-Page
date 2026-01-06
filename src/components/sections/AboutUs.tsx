@@ -13,60 +13,71 @@ const AboutUs = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
+                        initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
                         <div>
-                            <h3 className="text-brand-blue font-bold tracking-widest uppercase text-sm mb-2">Conócenos</h3>
-                            <h2 className="text-4xl md:text-5xl font-black text-brand-dark leading-tight">
-                                Pasión por la salud <br />y la <span className="text-brand-gold">enseñanza</span>
+                            <h3 className="text-[#022249] font-black tracking-[0.3em] uppercase text-xs mb-4 border-l-4 border-[#d7af58] pl-4">
+                                Conócenos
+                            </h3>
+                            <h2 className="text-4xl md:text-6xl font-black text-[#022249] leading-tight tracking-tighter uppercase italic">
+                                Pasión por la salud <br />y la <span className="text-[#d7af58]">enseñanza</span>
                             </h2>
-                            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-                                Somos un centro odontológico integral que combina la atención clínica de vanguardia con un compromiso inquebrantable hacia la formación de futuros especialistas.
+                            <p className="mt-8 text-lg text-gray-500 leading-relaxed font-medium">
+                                Somos un centro odontológico integral que combina la atención clínica de vanguardia con un compromiso inquebrantable hacia la formación de futuros especialistas en el Perú.
                             </p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="p-6 bg-gray-50 rounded-xl border-l-4 border-brand-blue">
-                                <Target className="text-brand-blue mb-3" size={32} />
-                                <h4 className="text-xl font-bold text-brand-dark mb-2">Misión</h4>
-                                <p className="text-sm text-gray-600">Proveer salud dental de calidad y capacitar alumnos con estándares internacionales.</p>
+                            <div className="p-8 bg-gray-50 rounded-[30px] border-b-4 border-[#022249] shadow-sm hover:shadow-md transition-shadow">
+                                <Target className="text-[#022249] mb-4" size={35} />
+                                <h4 className="text-xl font-black text-[#022249] mb-2 uppercase italic">Misión</h4>
+                                <p className="text-sm text-gray-500 leading-snug">Proveer salud dental de calidad y capacitar alumnos con estándares internacionales.</p>
                             </div>
-                            <div className="p-6 bg-gray-50 rounded-xl border-l-4 border-brand-gold">
-                                <Eye className="text-brand-gold mb-3" size={32} />
-                                <h4 className="text-xl font-bold text-brand-dark mb-2">Visión</h4>
-                                <p className="text-sm text-gray-600">Ser la institución líder en el Perú que une la práctica clínica con la excelencia académica.</p>
+                            <div className="p-8 bg-gray-50 rounded-[30px] border-b-4 border-[#d7af58] shadow-sm hover:shadow-md transition-shadow">
+                                <Eye className="text-[#d7af58] mb-4" size={35} />
+                                <h4 className="text-xl font-black text-[#022249] mb-2 uppercase italic">Visión</h4>
+                                <p className="text-sm text-gray-500 leading-snug">Ser la institución líder en el Perú que une la práctica clínica con la excelencia académica.</p>
                             </div>
                         </div>
 
-                        <div className="flex items-center gap-8 pt-4 border-t border-gray-100">
-                            <div className="flex items-center gap-2">
-                                <ShieldCheck className="text-brand-blue" size={24} />
-                                <span className="font-bold text-brand-dark text-sm uppercase">Ética</span>
+                        <div className="flex items-center gap-10 pt-6 border-t border-gray-100">
+                            <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-full bg-[#022249]/10 flex items-center justify-center">
+                                    <ShieldCheck className="text-[#022249]" size={22} />
+                                </div>
+                                <span className="font-black text-[#022249] text-xs uppercase tracking-widest">Ética</span>
                             </div>
-                            <div className="flex items-center gap-2">
-                                <Award className="text-brand-gold" size={24} />
-                                <span className="font-bold text-brand-dark text-sm uppercase">Excelencia</span>
+                            <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-full bg-[#d7af58]/10 flex items-center justify-center">
+                                    <Award className="text-[#d7af58]" size={22} />
+                                </div>
+                                <span className="font-black text-[#022249] text-xs uppercase tracking-widest">Excelencia</span>
                             </div>
                         </div>
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
+                        initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl"
+                        className="relative h-[550px]"
                     >
-                        <Image
-                            src="/images/placeholder.webp"
-                            alt="Nuestro equipo de trabajo"
-                            fill
-                            className="object-cover"
-                        />
-                        <div className="absolute -bottom-4 -right-4 w-32 h-32 border-b-8 border-r-8 border-brand-gold -z-10" />
+                        <div className="absolute -top-6 -right-6 w-full h-full border-2 border-[#d7af58] rounded-[40px] -z-10 translate-x-4 translate-y-4" />
+
+                        <div className="relative w-full h-full rounded-[40px] overflow-hidden shadow-2xl">
+                            <Image
+                                src="/images/placeholder.webp"
+                                alt="Nuestro equipo de trabajo"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-[#022249]/5" />
+                        </div>
                     </motion.div>
+
                 </div>
             </div>
         </section>

@@ -5,41 +5,33 @@ import Image from "next/image";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const slides = [
     {
         id: 1,
         src: "/images/placeholder.webp",
         tag: "Curso virtual",
-        title: "Práctica Clínica en Endodoncia",
-        description: "Imagenología Diagnóstica Avanzada para la práctica diaria. Aprende las técnicas más modernas con especialistas certificados.",
-        slug: "endodoncia-avanzada"
+        title: "Domina la Imagenología avanzada en Implantología y Periodoncia",
+        description: "Domina la imagenología avanzada aplicada a la Implantología y Periodoncia. Diagnóstico preciso para el éxito clínico.",
+        slug: "imagenologia-implantologia-periodoncia"
     },
     {
         id: 2,
         src: "/images/placeholder.webp",
-        tag: "Diplomado",
-        title: "Ortodoncia Interceptiva",
-        description: "Domina el diagnóstico temprano y tratamiento de maloclusiones en dentición mixta.",
-        slug: "ortodoncia-interceptiva"
+        tag: "Curso virtual",
+        title: "Radiología Bucal y Maxilofacial Aplicada a la Rehabilitación Oral",
+        description: "Radiología Bucal y Maxilofacial aplicada directamente a la Rehabilitación Oral. Optimiza tus planes de tratamiento.",
+        slug: "radiologia-rehabilitacion-oral"
     },
     {
         id: 3,
         src: "/images/placeholder.webp",
         tag: "Curso virtual",
-        title: "Práctica Clínica en Endodoncia",
-        description: "Imagenología Diagnóstica Avanzada para la práctica diaria. Aprende las técnicas más modernas con especialistas certificados.",
-        slug: "endodoncia-avanzada"
-    },
-    {
-        id: 4,
-        src: "/images/placeholder.webp",
-        tag: "Diplomado",
-        title: "Ortodoncia Interceptiva",
-        description: "Domina el diagnóstico temprano y tratamiento de maloclusiones en dentición mixta.",
-        slug: "ortodoncia-interceptiva"
-    },
+        title: "Imagenología Diagnóstica Avanzada para la Práctica Clínica en Endodoncia",
+        description: "Imagenología Diagnóstica Avanzada para la Práctica Clínica en Endodoncia. Tecnología de punta en tus manos.",
+        slug: "imagenologia-clinica-endodoncia"
+    }
 ];
 
 const Hero = () => {
@@ -72,6 +64,7 @@ const Hero = () => {
                                 className="object-cover"
                                 priority
                             />
+                            <div className="absolute inset-0 bg-black/5" />
                         </div>
                     ))}
                 </div>
@@ -81,12 +74,11 @@ const Hero = () => {
                 <div className="max-w-7xl mx-auto px-4 md:px-12">
                     <div className="pointer-events-auto max-w-sm md:max-w-md bg-white p-8 md:p-10 rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
 
-                        {/* Tag superior */}
                         <span className="text-[#d7af58] font-bold text-xs uppercase tracking-[0.2em] block mb-4 border-l-4 border-[#d7af58] pl-3">
-                {currentSlide.tag}
-            </span>
+                            {currentSlide.tag}
+                        </span>
 
-                        <h2 className="text-[#d7af58] text-3xl md:text-4xl font-black leading-tight mb-5">
+                        <h2 className="text-[#d7af58] text-3xl md:text-3xl font-black leading-tight mb-5 italic uppercase tracking-tighter">
                             {currentSlide.title}
                         </h2>
 
@@ -98,16 +90,14 @@ const Hero = () => {
                             href={`/cursos/${currentSlide.slug}`}
                             className="flex items-center w-full bg-[#022249] group rounded-full overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1"
                         >
-                            {/* Contenedor del Icono */}
                             <div className="bg-[#d7af58] p-4 md:p-5 group-hover:brightness-110 transition-all">
                                 <ChevronRight className="text-white w-5 h-5 md:w-6 md:h-6" />
                             </div>
 
-                            {/* Contenedor del Texto (flex-1 para ocupar el resto del espacio) */}
                             <div className="flex-1 text-center pr-6 md:pr-10">
-                    <span className="text-white font-bold text-[10px] md:text-xs uppercase tracking-widest">
-                        ¡Conoce más a detalle!
-                    </span>
+                                <span className="text-white font-bold text-[10px] md:text-xs uppercase tracking-widest">
+                                    ¡Conoce más a detalle!
+                                </span>
                             </div>
                         </Link>
                     </div>
@@ -123,7 +113,7 @@ const Hero = () => {
                         className={`h-2.5 transition-all duration-500 rounded-full cursor-pointer outline-none ${
                             index === selectedIndex
                                 ? "bg-[#022249] w-14 shadow-md"
-                                : "bg-[#022249]/60 w-3 hover:bg-brand-blue/40"
+                                : "bg-[#022249]/30 w-3 hover:bg-[#022249]/60"
                         }`}
                     />
                 ))}

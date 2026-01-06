@@ -40,7 +40,7 @@ const PastEditions = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Título de la sección */}
-                <h2 className="text-3xl md:text-5xl font-black text-brand-dark mb-12 tracking-tight">
+                <h2 className="text-[#022249] text-3xl md:text-5xl font-black text-brand-dark mb-12 tracking-tight">
                     Nuestras Ediciones Pasadas:
                 </h2>
 
