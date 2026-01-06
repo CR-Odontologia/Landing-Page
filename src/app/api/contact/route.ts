@@ -16,7 +16,7 @@ export async function POST(req: Request) {
           <h2 style="color: #022249;">Nueva consulta desde la web</h2>
           <p><strong>Nombre:</strong> ${nombre} ${apellido}</p>
           <p><strong>Email:</strong> ${email}</p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/${celular}">${celular}</a></p>
+          <p><strong>Número de celular:</strong> <a href="https://wa.me/${celular}">${celular}</a></p>
           <p><strong>Consulta:</strong></p>
           <div style="background: #f4f4f4; padding: 15px; border-radius: 5px;">
             ${consulta}
