@@ -12,7 +12,12 @@ interface Props {
 
 const UnderConstruction = ({ sectionName, availableDate }: Props) => {
     return (
-        <section className="min-h-[80vh] flex items-center justify-center bg-white px-4">
+        <section className="min-h-[90vh] flex items-center justify-center bg-white px-4">
+            <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.2 }}
+            >
             <div className="max-w-3xl w-full text-center">
 
                 <motion.div
@@ -55,8 +60,8 @@ const UnderConstruction = ({ sectionName, availableDate }: Props) => {
                         Solicitar información
                     </Link>
                 </div>
-
             </div>
+                </motion.div>
         </section>
     );
 };
