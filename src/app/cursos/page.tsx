@@ -3,37 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, Clock, ArrowRight, DollarSign } from "lucide-react";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
 
-const cursos = [
-    {
-        nombre: "Domina la Imagenología avanzada en Implantología y Periodoncia",
-        duracion: "4 semanas",
-        inicio: "02/02/2026",
-        fin: "25/02/2026",
-        precio: "250",
-        imagen: "/images/placeholder.webp",
-        slug: "imagenologia-implantologia-periodoncia"
-    },
-    {
-        nombre: "Radiología Bucal y Maxilofacial Aplicada a la Rehabilitación Oral",
-        duracion: "4 semanas",
-        inicio: "02/02/2026",
-        fin: "26/02/2026",
-        precio: "250",
-        imagen: "/images/placeholder.webp",
-        slug: "radiologia-rehabilitacion-oral"
-    },
-    {
-        nombre: "Imagenología Diagnóstica Avanzada para la Práctica Clínica en Endodoncia",
-        duracion: "4 semanas",
-        inicio: "03/02/2026",
-        fin: "27/02/2026",
-        precio: "250",
-        imagen: "/images/placeholder.webp",
-        slug: "imagenologia-clinica-endodoncia"
-    }
-];
+import  cursosData  from "@/data/cursos";
 
 const CursosPage = () => {
     return (
@@ -50,18 +22,19 @@ const CursosPage = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {cursos.map((curso, index) => (
+                    {cursosData.map((curso) => (
                         <Link
-                            key={index}
+                            key={curso.id}
                             href={`/cursos/${curso.slug}`}
                             className="group bg-white rounded-[40px] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col border border-gray-100"
                         >
                             <div className="relative h-60 w-full overflow-hidden">
                                 <Image
-                                    src={curso.imagen}
-                                    alt={curso.nombre}
+                                    src={`/images/placeholder.webp`}
+                                    alt={curso.titulo}
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    priority
                                 />
                                 <div className="absolute top-5 left-5 bg-[#022249] text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">
                                     Matrículas Abiertas
@@ -70,7 +43,7 @@ const CursosPage = () => {
 
                             <div className="p-8 flex-1 flex flex-col">
                                 <h3 className="text-xl md:text-2xl font-black text-[#022249] mb-6 leading-tight min-h-[80px]">
-                                    {curso.nombre}
+                                    {curso.titulo}
                                 </h3>
 
                                 <div className="space-y-4 mb-8">
@@ -78,13 +51,13 @@ const CursosPage = () => {
                                         <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center">
                                             <Clock size={16} className="text-[#d7af58]" />
                                         </div>
-                                        <span>{curso.duracion}</span>
+                                        <span>Duración: {curso.infoGeneral.duracion}</span>
                                     </div>
                                     <div className="flex items-center gap-3 text-gray-600 text-sm font-semibold">
                                         <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center">
                                             <Calendar size={16} className="text-[#d7af58]" />
                                         </div>
-                                        <span>{curso.inicio} - {curso.fin}</span>
+                                        <span>{curso.infoGeneral.inicio} - {curso.infoGeneral.fin}</span>
                                     </div>
                                 </div>
 
@@ -93,7 +66,7 @@ const CursosPage = () => {
                                         <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest mb-1">Pago único</p>
                                         <p className="text-3xl font-black text-[#d7af58]">
                                             <span className="text-lg font-bold mr-1">$</span>
-                                            {curso.precio}
+                                            {curso.infoGeneral.precio}
                                         </p>
                                     </div>
 

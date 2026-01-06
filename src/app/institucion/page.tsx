@@ -33,14 +33,14 @@ const InstitucionPage = () => {
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="w-full lg:w-1/2">
                             <h2 className="text-3xl md:text-5xl font-black text-[#022249] mb-8 leading-tight">
-                                Líderes en formación <br /> odontológica de postgrado
+                                Líderes en formación <br /> odontológica
                             </h2>
                             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                                 <p>
                                     En <strong>CR Odontología</strong>, nacimos con la visión de elevar el estándar de la práctica dental en el Perú. No solo somos un centro de atención, sino un ecosistema de aprendizaje continuo.
                                 </p>
                                 <p>
-                                    Contamos con infraestructura moderna y tecnología de vanguardia para asegurar que cada alumno y paciente reciba una experiencia de clase mundial. Nuestra trayectoria nos respalda como referentes en educación especializada.
+                                    Contamos con infraestructura moderna y tecnología de vanguardia para asegurar que cada alumno y paciente reciba una experiencia de clase mundial.
                                 </p>
                             </div>
                         </div>

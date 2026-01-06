@@ -7,32 +7,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronRight } from "lucide-react";
 
-const slides = [
-    {
-        id: 1,
-        src: "/images/placeholder.webp",
-        tag: "Curso virtual",
-        title: "Domina la Imagenología avanzada en Implantología y Periodoncia",
-        description: "Domina la imagenología avanzada aplicada a la Implantología y Periodoncia. Diagnóstico preciso para el éxito clínico.",
-        slug: "imagenologia-implantologia-periodoncia"
-    },
-    {
-        id: 2,
-        src: "/images/placeholder.webp",
-        tag: "Curso virtual",
-        title: "Radiología Bucal y Maxilofacial Aplicada a la Rehabilitación Oral",
-        description: "Radiología Bucal y Maxilofacial aplicada directamente a la Rehabilitación Oral. Optimiza tus planes de tratamiento.",
-        slug: "radiologia-rehabilitacion-oral"
-    },
-    {
-        id: 3,
-        src: "/images/placeholder.webp",
-        tag: "Curso virtual",
-        title: "Imagenología Diagnóstica Avanzada para la Práctica Clínica en Endodoncia",
-        description: "Imagenología Diagnóstica Avanzada para la Práctica Clínica en Endodoncia. Tecnología de punta en tus manos.",
-        slug: "imagenologia-clinica-endodoncia"
-    }
-];
+import cursosData from "@/data/cursos";
 
 const Hero = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
@@ -49,22 +24,23 @@ const Hero = () => {
         emblaApi.on("select", onSelect);
     }, [emblaApi, onSelect]);
 
-    const currentSlide = slides[selectedIndex];
+    // Usamos directamente cursosData para obtener el slide actual
+    const currentSlide = cursosData[selectedIndex];
 
     return (
         <section className="relative w-full bg-white pb-20 md:pb-32">
             <div className="relative h-[500px] md:h-[650px] w-full overflow-hidden" ref={emblaRef}>
                 <div className="flex h-full">
-                    {slides.map((slide) => (
-                        <div className="relative flex-[0_0_100%] min-w-0 h-full" key={slide.id}>
+                    {cursosData.map((curso) => (
+                        <div className="relative flex-[0_0_100%] min-w-0 h-full" key={curso.id}>
                             <Image
-                                src={slide.src}
-                                alt={slide.title}
+                                src={`/images/placeholder.webp`}
+                                alt={curso.titulo}
                                 fill
                                 className="object-cover"
                                 priority
                             />
-                            <div className="absolute inset-0 bg-black/5" />
+                            <div className="absolute inset-0 bg-black/10" />
                         </div>
                     ))}
                 </div>
@@ -78,12 +54,12 @@ const Hero = () => {
                             {currentSlide.tag}
                         </span>
 
-                        <h2 className="text-[#d7af58] text-3xl md:text-3xl font-black leading-tight mb-5 italic uppercase tracking-tighter">
-                            {currentSlide.title}
+                        <h2 className="text-[#d7af58] text-2xl md:text-3xl font-black leading-tight mb-5 italic uppercase tracking-tighter">
+                            {currentSlide.titulo}
                         </h2>
 
-                        <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8">
-                            {currentSlide.description}
+                        <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 line-clamp-3">
+                            Especialízate en este programa intensivo de {currentSlide.infoGeneral.duracion} con doble certificación internacional.
                         </p>
 
                         <Link
@@ -105,7 +81,7 @@ const Hero = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 mt-12 flex justify-end gap-3">
-                {slides.map((_, index) => (
+                {cursosData.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => emblaApi?.scrollTo(index)}
