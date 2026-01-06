@@ -1,14 +1,12 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 
 const PoliticasPrivacidad = () => {
     return (
         <main className="pt-32 pb-20 bg-white min-h-screen">
             <div className="max-w-6xl mx-auto px-6 md:px-12">
 
-                {/* ENCABEZADO INSTITUCIONAL */}
                 <header className="mb-16 border-b-2 border-[#022249] pb-10">
                     <h1 className="text-3xl md:text-5xl font-black text-[#022249] uppercase tracking-tighter mb-4">
                         Políticas de Privacidad
@@ -24,7 +22,6 @@ const PoliticasPrivacidad = () => {
                         El presente documento establece los términos en que <strong> CR Odontología </strong> trata la información personal de sus usuarios, en estricto cumplimiento de la Ley N° 29733, Ley de Protección de Datos Personales en Perú y su Reglamento.
                     </p>
 
-                    {/* SECCIÓN 1 */}
                     <section className="space-y-4">
                         <h2 className="text-lg font-black text-[#022249] uppercase border-l-4 border-[#d7af58] pl-4">
                             1. Titularidad y Consentimiento
@@ -34,7 +31,6 @@ const PoliticasPrivacidad = () => {
                         </p>
                     </section>
 
-                    {/* SECCIÓN 2: ISPRING LMS - ÉNFASIS FORMAL */}
                     <section className="space-y-4 bg-gray-50 p-8 border border-gray-200">
                         <h2 className="text-lg font-black text-[#022249] uppercase">
                             2. Tratamiento mediante Terceros y Aula Virtual (iSpring LMS)
@@ -47,7 +43,6 @@ const PoliticasPrivacidad = () => {
                         </p>
                     </section>
 
-                    {/* SECCIÓN 3 */}
                     <section className="space-y-4">
                         <h2 className="text-lg font-black text-[#022249] uppercase border-l-4 border-[#d7af58] pl-4">
                             3. Transferencia de Datos y Certificación Internacional
@@ -57,7 +52,6 @@ const PoliticasPrivacidad = () => {
                         </p>
                     </section>
 
-                    {/* SECCIÓN 4 */}
                     <section className="space-y-4">
                         <h2 className="text-lg font-black text-[#022249] uppercase border-l-4 border-[#d7af58] pl-4">
                             4. Finalidad del Tratamiento
@@ -67,7 +61,6 @@ const PoliticasPrivacidad = () => {
                         </p>
                     </section>
 
-                    {/* SECCIÓN 5 */}
                     <section className="space-y-4">
                         <h2 className="text-lg font-black text-[#022249] uppercase border-l-4 border-[#d7af58] pl-4">
                             5. Ejercicio de Derechos ARCO
