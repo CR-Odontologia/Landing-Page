@@ -41,8 +41,7 @@ const docentesData = [
             "Cirujano Dentista – Universidad Peruana de Ciencias Aplicadas (UPC)",
             "Especialista en Endodoncia – Universidad Peruana de Ciencias Aplicadas (UPC)",
             "Magíster en Investigación en Odontología – Universidad Internacional de Catalunya (UIC), España",
-            "Intercambio académico en el Nicklaus Children's Hospital (Miami), área clínica y formativa (2018)",
-            "Intercambio estudiantil en Endodoncia, Florida, EE. UU. (2018)"
+            "Intercambio académico en el Nicklaus Children's Hospital (Miami), área clínica y formativa (2018)"
         ]
     }
 ];

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion"; // Importamos para la animación
+import { motion, AnimatePresence } from "framer-motion";
 import {
     Calendar, Clock, Laptop, BookOpen,
     CheckCircle2, ChevronDown, ChevronUp, Award
