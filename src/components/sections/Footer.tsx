@@ -26,13 +26,13 @@ const Footer = () => {
                             Excelencia en servicios odontológicos y formación académica especializada.
                         </p>
                         <div className="flex items-center space-x-4">
-                            <a href="https://www.facebook.com/profile.php?id=61585492244061" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors">
+                            <a href="https://www.facebook.com/profile.php?id=61585492244061" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors" target="_blank">
                                 <Facebook size={18} />
                             </a>
-                            <a href="https://www.instagram.com/crformacion/" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors">
+                            <a href="https://www.instagram.com/crformacion/" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors" target="_blank">
                                 <Instagram size={18} />
                             </a>
-                            <a href="https://wa.me/+51982897557" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors">
+                            <a href="https://wa.me/+51982897557" className="w-9 h-9 rounded-full bg-[#2261a8] flex items-center justify-center hover:bg-[#d7af58] transition-colors" target="_blank">
                                 <MessageCircle size={18} />
                             </a>
                         </div>
