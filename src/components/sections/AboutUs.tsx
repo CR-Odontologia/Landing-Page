@@ -26,7 +26,7 @@ const AboutUs = () => {
                                 Pasión por la salud <br />y la <span className="text-[#d7af58]">enseñanza</span>
                             </h2>
                             <p className="mt-8 text-lg text-gray-500 leading-relaxed font-medium">
-                                Somos un centro odontológico integral que combina la atención clínica de vanguardia con un compromiso inquebrantable hacia la formación de futuros especialistas en el Perú.
+                                Somos una institución dedicada a la capacitación y actualización profesional en el área de la salud, con especial énfasis en odontología y disciplinas afines.
                             </p>
                         </div>
 
@@ -34,12 +34,12 @@ const AboutUs = () => {
                             <div className="p-8 bg-gray-50 rounded-[30px] border-b-4 border-[#022249] shadow-sm hover:shadow-md transition-shadow">
                                 <Target className="text-[#022249] mb-4" size={35} />
                                 <h4 className="text-xl font-black text-[#022249] mb-2 uppercase italic">Misión</h4>
-                                <p className="text-sm text-gray-500 leading-snug">Proveer salud dental de calidad y capacitar alumnos con estándares internacionales.</p>
+                                <p className="text-sm text-gray-500 leading-snug">Brindar programas internacionales de formación especializada en el área de la salud, con énfasis en odontología.</p>
                             </div>
                             <div className="p-8 bg-gray-50 rounded-[30px] border-b-4 border-[#d7af58] shadow-sm hover:shadow-md transition-shadow">
                                 <Eye className="text-[#d7af58] mb-4" size={35} />
                                 <h4 className="text-xl font-black text-[#022249] mb-2 uppercase italic">Visión</h4>
-                                <p className="text-sm text-gray-500 leading-snug">Ser la institución líder en el Perú que une la práctica clínica con la excelencia académica.</p>
+                                <p className="text-sm text-gray-500 leading-snug">Ser una institución líder en formación especializada en salud a nivel nacional e internacional.</p>
                             </div>
                         </div>
 

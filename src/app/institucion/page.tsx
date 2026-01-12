@@ -37,10 +37,10 @@ const InstitucionPage = () => {
                             </h2>
                             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                                 <p>
-                                    En <strong>CR Odontología</strong>, nacimos con la visión de elevar el estándar de la práctica dental en el Perú. No solo somos un centro de atención, sino un ecosistema de aprendizaje continuo.
+                                    En <strong> CR Formación Especializada </strong> operamos bajo un modelo de educación continua en salud, estructurada en áreas académicas, administrativas y tecnológicas que trabajan de manera integrada. Nuestro modelo educativo se basa en la virtualidad, permitiendo el acceso a profesionales de diferentes regiones, y en la participación de especialistas con amplia experiencia clínica y docente.
                                 </p>
                                 <p>
-                                    Contamos con infraestructura moderna y tecnología de vanguardia para asegurar que cada alumno y paciente reciba una experiencia de clase mundial.
+                                    Promovemos una gestión moderna, orientada a la calidad educativa, la innovación y la mejora continua, con una clara orientación al estudiante y a los resultados profesionales que este puede alcanzar tras culminar los programas.
                                 </p>
                             </div>
                         </div>
@@ -87,7 +87,7 @@ const InstitucionPage = () => {
                             </div>
                             <h3 className="text-2xl font-black text-[#022249] mb-4 uppercase">Nuestra Misión</h3>
                             <p className="text-gray-600 text-lg">
-                                Brindar educación odontológica especializada de alto nivel, integrando la teoría científica con la práctica clínica intensiva, para formar profesionales competentes y éticos.
+                                Brindar programas de formación especializada en el área de la salud, con énfasis en odontología, mediante una educación virtual de alta calidad, basada en evidencia científica, enfoque teórico–práctico y acompañamiento académico permanente, contribuyendo al fortalecimiento de las competencias clínicas, éticas y profesionales de nuestros estudiantes.
                             </p>
                         </div>
 
@@ -98,7 +98,7 @@ const InstitucionPage = () => {
                             </div>
                             <h3 className="text-2xl font-black text-[#022249] mb-4 uppercase">Nuestra Visión</h3>
                             <p className="text-gray-600 text-lg">
-                                Ser la institución líder en el Perú reconocida internacionalmente por la innovación en técnicas odontológicas y la excelencia académica de nuestros egresados.
+                                Ser una institución líder en formación especializada en salud a nivel nacional e internacional, reconocida por la excelencia académica, la innovación educativa y la contribución al desarrollo profesional y humano de los profesionales de la salud.
                             </p>
                         </div>
                     </div>

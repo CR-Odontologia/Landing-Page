@@ -12,14 +12,14 @@ const PoliticasPrivacidad = () => {
                         Políticas de Privacidad
                     </h1>
                     <p className="text-gray-500 font-bold text-xs uppercase tracking-[0.2em]">
-                        Documento Normativo Interno • CR Odontología
+                        Documento Normativo Interno • CR Formación Especializada
                     </p>
                 </header>
 
                 <div className="space-y-12 text-justify text-gray-700 leading-relaxed text-sm md:text-base">
 
                     <p className="italic text-gray-500">
-                        El presente documento establece los términos en que <strong> CR Odontología </strong> trata la información personal de sus usuarios, en estricto cumplimiento de la Ley N° 29733, Ley de Protección de Datos Personales en Perú y su Reglamento.
+                        El presente documento establece los términos en que <strong> CR Imagenologia Maxilofacial SAC </strong> trata la información personal de sus usuarios, en estricto cumplimiento de la Ley N° 29733, Ley de Protección de Datos Personales en Perú y su Reglamento.
                     </p>
 
                     <section className="space-y-4">
@@ -27,7 +27,7 @@ const PoliticasPrivacidad = () => {
                             1. Titularidad y Consentimiento
                         </h2>
                         <p>
-                            CR Odontología, con domicilio legal en Lima, informa que los datos personales facilitados a través de sus plataformas digitales serán incorporados a sus bancos de datos de titularidad institucional. Al completar nuestros formularios, el usuario otorga su consentimiento previo, informado, expreso e inequívoco para el tratamiento de su información.
+                            CR Imagenologia Maxilofacial SAC, con domicilio legal en Lima, informa que los datos personales facilitados a través de sus plataformas digitales serán incorporados a sus bancos de datos de titularidad institucional. Al completar nuestros formularios, el usuario otorga su consentimiento previo, informado, expreso e inequívoco para el tratamiento de su información.
                         </p>
                     </section>
 
@@ -48,7 +48,7 @@ const PoliticasPrivacidad = () => {
                             3. Transferencia de Datos y Certificación Internacional
                         </h2>
                         <p>
-                            En el marco de los convenios de cooperación académica, CR Odontología queda facultada para transferir los datos estrictamente necesarios a la <strong>Faculdade do Centro Oeste Paulista (FACOP)</strong> de Brasil. Dicha transferencia tiene como finalidad exclusiva la validación académica, registro y emisión de la doble certificación internacional ofertada en nuestros programas.
+                            En el marco de los convenios de cooperación académica, CR Imagenologia Maxilofacial SAC queda facultada para transferir los datos estrictamente necesarios a la <strong>Faculdade do Centro Oeste Paulista (FACOP)</strong> de Brasil. Dicha transferencia tiene como finalidad exclusiva la validación académica, registro y emisión de la doble certificación internacional ofertada en nuestros programas.
                         </p>
                     </section>
 

@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-    title: "CR Odontologia",
+    title: "CR Formación Especializada",
     description: "Servicios odontológicos especializados y formación académica profesional.",
 };
 

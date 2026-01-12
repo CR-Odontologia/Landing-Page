@@ -14,14 +14,14 @@ const TerminosCondiciones = () => {
                         Términos y Condiciones de Uso
                     </h1>
                     <p className="text-gray-500 font-bold text-xs uppercase tracking-[0.2em]">
-                        Reglamento de Servicios Académicos Digitales • CR Odontología
+                        Reglamento de Servicios Académicos Digitales • CR Formación Especializada
                     </p>
                 </header>
 
                 <div className="space-y-12 text-justify text-gray-700 leading-relaxed text-sm md:text-base">
 
                     <p className="italic text-gray-500">
-                        El presente reglamento rige el acceso y uso de los servicios educativos, plataformas digitales y contenidos académicos provistos por <strong> CR Odontología</strong>. La matriculación en cualquiera de nuestros programas implica la aceptación total y sin reservas de las cláusulas aquí expuestas.
+                        El presente reglamento rige el acceso y uso de los servicios educativos, plataformas digitales y contenidos académicos provistos por <strong> CR Imagenologia Maxilofacial SAC </strong>. La matriculación en cualquiera de nuestros programas implica la aceptación total y sin reservas de las cláusulas aquí expuestas.
                     </p>
 
                     <section className="space-y-4">
@@ -30,7 +30,7 @@ const TerminosCondiciones = () => {
                         </h2>
                         <div className="space-y-4">
                             <p>
-                                <strong>1.1. Contenido Institucional:</strong> La estructura de los cursos, diseños, logotipos, videos producidos por la institución y guías de estudio son propiedad intelectual exclusiva de <strong>CR Odontología</strong>. Queda prohibida su reproducción, descarga no autorizada o comercialización.
+                                <strong>1.1. Contenido Institucional:</strong> La estructura de los cursos, diseños, logotipos, videos producidos por la institución y guías de estudio son propiedad intelectual exclusiva de <strong>CR Imagenologia Maxilofacial SAC</strong>. Queda prohibida su reproducción, descarga no autorizada o comercialización.
                             </p>
                             <p>
                                 <strong>1.2. Material Docente y de Terceros:</strong> El alumno reconoce que ciertos materiales bibliográficos, artículos científicos, presentaciones de autoría docente o recursos de acceso público facilitados en el Aula Virtual, pertenecen a sus respectivos autores o se rigen bajo sus propias licencias de uso. Su inclusión en el programa tiene una finalidad estrictamente pedagógica y de referencia académica.
@@ -56,7 +56,7 @@ const TerminosCondiciones = () => {
                             3. Proceso de Doble Certificación Internacional
                         </h2>
                         <p>
-                            Para ser acreedor a la certificación emitida por CR Odontología y la <strong>Faculdade do Centro Oeste Paulista (FACOP)</strong>, el alumno deberá: (i) Haber completado satisfactoriamente el 100% de los módulos del programa; (ii) Aprobar las evaluaciones académicas con la nota mínima requerida; y (iii) No presentar saldos pendientes de pago. Los tiempos de emisión de los certificados internacionales están sujetos a los procesos administrativos internos de ambas instituciones y a la normativa educativa internacional vigente.
+                            Para ser acreedor a la certificación emitida por CR Formación Especializada y la <strong>Faculdade do Centro Oeste Paulista (FACOP)</strong>, el alumno deberá: (i) Haber completado satisfactoriamente el 100% de los módulos del programa; (ii) Aprobar las evaluaciones académicas con la nota mínima requerida; y (iii) No presentar saldos pendientes de pago. Los tiempos de emisión de los certificados internacionales están sujetos a los procesos administrativos internos de ambas instituciones y a la normativa educativa internacional vigente.
                         </p>
                     </section>
 

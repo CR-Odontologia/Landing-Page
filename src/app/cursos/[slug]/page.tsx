@@ -50,7 +50,7 @@ const CursoIndividual = () => {
                             <Award className="text-[#d7af58]" size={32} />
                             <div>
                                 <p className="text-xs font-bold uppercase tracking-tight text-[#d7af58]">Doble Certificación</p>
-                                <p className="text-sm font-medium">CR Odontología & FACOP (Brasil)</p>
+                                <p className="text-sm font-medium">CR Formación Especializada & FACOP (Brasil)</p>
                             </div>
                         </div>
                     </div>

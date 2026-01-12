@@ -96,7 +96,7 @@ const Footer = () => {
 
                 {/* COPYRIGHT */}
                 <div className="border-t border-white/10 pt-8 text-center text-xs text-gray-500">
-                    <p>© {currentYear} CR Odontologia. Todos los derechos reservados.</p>
+                    <p>© {currentYear} CR Formación Especializada. Todos los derechos reservados.</p>
                 </div>
             </div>
         </footer>
