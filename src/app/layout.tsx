@@ -14,7 +14,21 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
     title: "CR Formación Especializada",
-    description: "Servicios odontológicos especializados y formación académica profesional.",
+    description: "En CR Formación Especializada te brindamos servicios odontológicos especializados y formación académica profesional. Comunicate con nosotros a través de informes@crodontologia.com o mediante Whatsapp 982897557. CR Odontologia.",
+    icons: {
+        icon: "/favicon.ico",
+        apple: "/apple-touch-icon.png",
+    },
+    keywords: ["odontología", "diplomados", "postgrado", "Perú", "FACOP", "dentistas", "CR"],
+    authors: [{ name: "CR Formación Especializada" }],
+    openGraph: {
+        title: "CR Formación Especializada | CR Odontologia",
+        description: "Lleva tu carrera al siguiente nivel con nuestros diplomados.",
+        url: "https://crodontologia.com",
+        siteName: "CR Formación Especializada",
+        locale: "es_PE",
+        type: "website",
+    },
 };
 
 export default function RootLayout({
