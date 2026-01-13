@@ -76,7 +76,7 @@ const LibroReclamaciones = () => {
                     <div className="flex items-center gap-4 mb-6">
                         <FileText className="text-[#022249]" size={32} />
                         <h1 className="text-3xl md:text-5xl font-black text-[#022249] uppercase tracking-tighter">
-                            Libro de Reclamaciones <span className="text-[#d7af58]">Virtual</span>
+                            Libro de Reclamaciones Virtual
                         </h1>
                     </div>
                     <div className="space-y-2 text-[11px] font-bold text-gray-500 uppercase tracking-widest">
