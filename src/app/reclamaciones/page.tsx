@@ -74,7 +74,6 @@ const LibroReclamaciones = () => {
             <header className="bg-gray-50 py-16 px-6 border-b border-gray-100">
                 <div className="max-w-4xl mx-auto">
                     <div className="flex items-center gap-4 mb-6">
-                        <FileText className="text-[#022249]" size={32} />
                         <h1 className="text-3xl md:text-5xl font-black text-[#022249] uppercase tracking-tighter">
                             Libro de Reclamaciones Virtual
                         </h1>
