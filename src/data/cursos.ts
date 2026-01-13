@@ -10,7 +10,11 @@ const cursosData = [
             duracion: "4 semanas",
             modalidad: "100% Virtual (Sincrónico)",
             horario: "Lunes y Miércoles de 8:00 PM a 10:00 PM",
-            precio: 250,
+            precio: {
+                original: 250,
+                ofertaBase: 160,
+                ofertaFacop: 200
+            },
             moneda: "USD"
         },
         certificacion: {
@@ -40,7 +44,11 @@ const cursosData = [
             duracion: "4 semanas",
             modalidad: "100% Virtual (Sincrónico)",
             horario: "Lunes y Jueves de 8:00 PM a 10:00 PM",
-            precio: 250,
+            precio: {
+                original: 250,
+                ofertaBase: 160,
+                ofertaFacop: 200
+            },
             moneda: "USD"
         },
         certificacion: {
@@ -70,7 +78,11 @@ const cursosData = [
             duracion: "4 semanas",
             modalidad: "100% Virtual (Sincrónico)",
             horario: "Martes y Viernes de 8:00 PM a 10:00 PM",
-            precio: 250,
+            precio: {
+                original: 250,
+                ofertaBase: 160,
+                ofertaFacop: 200
+            },
             moneda: "USD"
         },
         certificacion: {

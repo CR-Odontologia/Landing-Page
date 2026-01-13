@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Calendar, Clock, Laptop, BookOpen,
-    CheckCircle2, ChevronDown, ChevronUp, Award
+    CheckCircle2, ChevronDown, ChevronUp, Award , Info
 } from "lucide-react";
 
 import cursosData from "@/data/cursos";
@@ -31,9 +31,16 @@ const CursoIndividual = () => {
     };
 
     const handleMatricula = () => {
-        console.log("Iniciando proceso de pago con Culqi para:", curso.titulo);
-        alert("El sistema de pagos Culqi se activará próximamente.");
+        console.log("Iniciando proceso de pago con Izipay para:", curso.titulo);
+        alert("El sistema de pagos Izipay se activará próximamente.");
     };
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [incluyeFacop, setIncluyeFacop] = useState(false);
+
+    const precioAMostrar = incluyeFacop
+        ? curso.infoGeneral.precio.ofertaFacop
+        : curso.infoGeneral.precio.ofertaBase;
 
     return (
         <main className="pt-24 bg-white min-h-screen">
@@ -140,11 +147,45 @@ const CursoIndividual = () => {
                             <div className="sticky top-32 bg-white border border-gray-100 rounded-[40px] p-8 shadow-2xl space-y-8">
                                 <div>
                                     <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Inversión (Pago Único)</p>
-                                    <p className="text-5xl font-black text-[#022249]">
-                                        <span className="text-2xl font-bold mr-1">$</span>
-                                        {curso.infoGeneral.precio}
-                                    </p>
+                                    <div className="flex items-baseline gap-3">
+                                        <p className="text-xl font-bold text-gray-300 line-through">
+                                            ${curso.infoGeneral.precio.original}
+                                        </p>
+                                        <p className="text-5xl font-black text-[#022249]">
+                                            <span className="text-2xl font-bold mr-1">$</span>
+                                            {precioAMostrar}
+                                        </p>
+                                    </div>
                                 </div>
+
+                                <div
+                                    className={`p-4 rounded-3xl border-2 transition-all cursor-pointer ${
+                                        incluyeFacop ? "border-[#d7af58] bg-[#d7af58]/5" : "border-gray-100 bg-gray-50"
+                                    }`}
+                                    onClick={() => setIncluyeFacop(!incluyeFacop)}
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <input
+                                            type="checkbox"
+                                            checked={incluyeFacop}
+                                            onChange={() => {}} // Manejado por el div padre
+                                            className="w-5 h-5 rounded border-gray-300 text-[#022249] focus:ring-[#022249]"
+                                        />
+                                        <div>
+                                            <p className="text-[11px] font-black text-[#022249] uppercase leading-tight">Incluir Certificación FACOP</p>
+                                            <p className="text-[10px] text-gray-500 font-medium">Doble certificación internacional (Brasil)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {!incluyeFacop && (
+                                    <div className="flex gap-2 p-4 bg-blue-50 rounded-2xl border border-blue-100">
+                                        <Info size={16} className="text-blue-500 shrink-0 mt-0.5" />
+                                        <p className="text-[10px] text-blue-700 leading-snug">
+                                            <strong>Nota:</strong> Puedes adquirir la certificación internacional FACOP posteriormente durante el transcurso del curso por un valor de <strong>$40 USD</strong> adicionales.
+                                        </p>
+                                    </div>
+                                )}
 
                                 <button
                                     onClick={handleMatricula}
@@ -157,10 +198,11 @@ const CursoIndividual = () => {
                                     <p className="font-bold text-[#022249] text-sm uppercase">El curso incluye:</p>
                                     <ul className="space-y-3">
                                         <li className="flex items-center gap-3 text-xs text-gray-500 font-medium">
-                                            <CheckCircle2 className="text-green-500" size={16} /> Acceso total a grabaciones
+                                            <CheckCircle2 className="text-green-500" size={16} /> Acceso total a grabaciones e iSpring LMS
                                         </li>
                                         <li className="flex items-center gap-3 text-xs text-gray-500 font-medium">
-                                            <CheckCircle2 className="text-green-500" size={16} /> Doble certificación oficial
+                                            <CheckCircle2 className="text-green-500" size={16} />
+                                            {incluyeFacop ? "Doble certificación oficial (CR Formación Especializada + FACOP)" : "Certificación CR Formación Especializada"}
                                         </li>
                                         <li className="flex items-center gap-3 text-xs text-gray-500 font-medium">
                                             <CheckCircle2 className="text-green-500" size={16} /> Material de estudio digital

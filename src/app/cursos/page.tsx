@@ -63,10 +63,20 @@ const CursosPage = () => {
 
                                 <div className="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
                                     <div>
-                                        <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest mb-1">Pago único</p>
-                                        <p className="text-3xl font-black text-[#d7af58]">
-                                            <span className="text-lg font-bold mr-1">$</span>
-                                            {curso.infoGeneral.precio}
+                                        <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest mb-1">Desde</p>
+                                        <div className="flex items-baseline gap-2">
+
+                                            <p className="text-sm font-bold text-gray-400 line-through">
+                                                ${curso.infoGeneral.precio.original}
+                                            </p>
+
+                                            <p className="text-4xl font-black text-[#d7af58]">
+                                                <span className="text-lg font-bold mr-1">$</span>
+                                                {curso.infoGeneral.precio.ofertaBase}
+                                            </p>
+                                        </div>
+                                        <p className="text-[9px] text-[#022249] font-bold uppercase tracking-tighter mt-1 opacity-70">
+                                            *Precio sin certificación FACOP
                                         </p>
                                     </div>
 
