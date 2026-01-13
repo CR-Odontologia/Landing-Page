@@ -1,14 +1,14 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.CONTACT_API_KEY);
 
 export async function POST(req: Request) {
     try {
         const { nombre, apellido, email, celular, consulta } = await req.json();
 
         const data = await resend.emails.send({
-            from: 'Web CR Odontología <onboarding@resend.dev>',
+            from: 'Web CR Odontología <informes@crodontologia.com>',
             to: ['informes@crodontologia.com'],
             subject: `Consulta Web: ${nombre} ${apellido}`,
             html: `
