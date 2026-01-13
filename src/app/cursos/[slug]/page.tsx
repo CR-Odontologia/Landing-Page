@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 import cursosData from "@/data/cursos";
+import Image from "next/image";
 
 const CursoIndividual = () => {
     const params = useParams();
@@ -44,12 +45,25 @@ const CursoIndividual = () => {
 
     return (
         <main className="pt-24 bg-white min-h-screen">
-            <section className="bg-[#022249] py-16 md:py-24 text-white relative overflow-hidden">
+            <section className="relative py-16 md:py-24 text-white overflow-hidden bg-[#022249]">
+                {/* Imagen de Fondo con Placeholder */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/images/placeholder.webp"
+                        alt={curso.titulo}
+                        fill
+                        className="object-cover opacity-30" // La opacidad baja permite que el color azul de fondo se mezcle
+                        priority
+                    />
+                    {/* Gradiente para asegurar que el texto sea legible */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#022249] via-[#022249]/80 to-transparent" />
+                </div>
+
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="max-w-4xl">
-                        <span className="inline-block bg-[#d7af58] text-[#022249] px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6">
-                            {curso.tag}
-                        </span>
+            <span className="inline-block bg-[#d7af58] text-[#022249] px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                {curso.tag}
+            </span>
                         <h1 className="text-4xl md:text-6xl font-black leading-tight mb-8 uppercase italic tracking-tighter">
                             {curso.titulo}
                         </h1>
@@ -62,7 +76,6 @@ const CursoIndividual = () => {
                         </div>
                     </div>
                 </div>
-                <div className="absolute top-0 right-0 w-1/3 h-full bg-[#d7af58] opacity-10 skew-x-12 translate-x-20" />
             </section>
 
             <section className="py-16 md:py-24">
