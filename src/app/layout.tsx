@@ -16,10 +16,15 @@ export const metadata: Metadata = {
     title: "CR Formación Especializada",
     description: "En CR Formación Especializada te brindamos servicios odontológicos especializados y formación académica profesional. Comunicate con nosotros a través de informes@crodontologia.com o mediante Whatsapp 982897557. CR Odontologia.",
     icons: {
-        icon: "/favicon.ico",
-        apple: "/apple-touch-icon.png",
+        icon: [
+            { url: "/favicon.ico" },
+            { url: "/icon.png", type: "image/png" },
+        ],
+        apple: [
+            { url: "/apple-touch-icon.png" },
+        ],
     },
-    keywords: ["odontología", "diplomados", "postgrado", "Perú", "FACOP", "dentistas", "CR"],
+    keywords: ["odontología", "diplomados", "postgrado", "Perú", "FACOP", "dentistas", "CR odontologia", "CR", "Formación Especializada"],
     authors: [{ name: "CR Formación Especializada" }],
     openGraph: {
         title: "CR Formación Especializada | CR Odontologia",
