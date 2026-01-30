@@ -24,20 +24,34 @@ const Hero = () => {
         emblaApi.on("select", onSelect);
     }, [emblaApi, onSelect]);
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkMobile();
+
+        window.addEventListener("resize", checkMobile);
+
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
     // Usamos directamente cursosData para obtener el slide actual
     const currentSlide = cursosData[selectedIndex];
 
     return (
-        <section className="relative w-full bg-white pb-20 md:pb-32">
+        <section className="relative w-full bg-white pt-[70px] md:pt-[80px] pb-20 md:pb-32">
             <div className="relative h-[500px] md:h-[650px] w-full overflow-hidden" ref={emblaRef}>
                 <div className="flex h-full">
                     {cursosData.map((curso) => (
                         <div className="relative flex-[0_0_100%] min-w-0 h-full" key={curso.id}>
                             <Image
-                                src={`/images/placeholder.webp`}
+                                src={isMobile ? `/images/courses/${curso.slug}-movil.jpg` : `/images/courses/${curso.slug}.jpg`}
                                 alt={curso.titulo}
                                 fill
-                                className="object-cover"
+                                className="object-fill"
                                 priority
                             />
                             <div className="absolute inset-0 bg-black/10" />

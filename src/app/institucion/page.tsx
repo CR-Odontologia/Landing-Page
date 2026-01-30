@@ -11,7 +11,7 @@ const InstitucionPage = () => {
             <section className="relative h-[40vh] md:h-[50vh] bg-[#022249] flex items-center overflow-hidden">
                 <div className="absolute inset-0 opacity-30">
                     <Image
-                        src="/images/placeholder.webp"
+                        src="/images/nuestra-institucion.jpg"
                         alt="Nuestra Institución"
                         fill
                         className="object-cover"
@@ -46,7 +46,7 @@ const InstitucionPage = () => {
                         </div>
                         <div className="w-full lg:w-1/2 relative h-[400px] rounded-3xl overflow-hidden shadow-2xl">
                             <Image
-                                src="/images/placeholder.webp"
+                                src="/images/courses/imagenologia-clinica-endodoncia-thumbnail.jpg"
                                 alt="Instalaciones"
                                 fill
                                 className="object-cover"

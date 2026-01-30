@@ -44,7 +44,7 @@ const DocenteDetailPage = () => {
                     >
                         <div className="relative h-[500px] md:h-[600px] w-full rounded-[40px] overflow-hidden shadow-2xl border-8 border-gray-50">
                             <Image
-                                src={docente.foto}
+                                src={`/images/staff/${docente.slug}.jpg`}
                                 alt={docente.nombre}
                                 fill
                                 className="object-cover"

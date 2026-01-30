@@ -36,7 +36,7 @@ const StaffPage = () => {
                             >
                                 <div className="relative h-[400px] w-full overflow-hidden">
                                     <Image
-                                        src={docente.foto}
+                                        src={`/images/staff/${docente.slug}.jpg`}
                                         alt={docente.nombre}
                                         fill
                                         className="object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90"

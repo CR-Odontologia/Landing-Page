@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { useParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -43,20 +43,35 @@ const CursoIndividual = () => {
         ? curso.infoGeneral.precio.ofertaFacop
         : curso.infoGeneral.precio.ofertaBase;
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkMobile();
+
+        window.addEventListener("resize", checkMobile);
+
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
+
     return (
         <main className="pt-24 bg-white min-h-screen">
             <section className="relative py-16 md:py-24 text-white overflow-hidden bg-[#022249]">
                 {/* Imagen de Fondo con Placeholder */}
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/placeholder.webp"
+                        src={isMobile ? `/images/courses/${curso.slug}-movil.jpg` : `/images/courses/${curso.slug}.jpg`}
                         alt={curso.titulo}
                         fill
-                        className="object-cover opacity-30" // La opacidad baja permite que el color azul de fondo se mezcle
+                        className="object-fill opacity-80" // La opacidad baja permite que el color azul de fondo se mezcle
                         priority
                     />
                     {/* Gradiente para asegurar que el texto sea legible */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#022249] via-[#022249]/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#022249] via-[#022249]/20 to-transparent" />
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

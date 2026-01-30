@@ -19,7 +19,7 @@ const Contact = () => {
                     <div className="w-full md:w-1/2">
                         <div className="relative w-full h-[400px] md:h-[550px]">
                             <Image
-                                src="/images/placeholder.webp"
+                                src="/images/tienes-una-consulta.png"
                                 alt="Contacto"
                                 fill
                                 className="object-contain"

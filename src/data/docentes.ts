@@ -4,7 +4,6 @@ const docentesData = [
         slug: "joseph-angulo",
         nombre: "Dr. Joseph Angulo Asuncion",
         especialidad: "Periodoncia e Implantología",
-        foto: "/images/placeholder.webp",
         cop: "35627",
         rne: "03455",
         trascendencia: [
@@ -18,7 +17,6 @@ const docentesData = [
         slug: "christian-gomez",
         nombre: "Dr. Christian Esteban Gomez Carrion",
         especialidad: "Rehabilitación Oral",
-        foto: "/images/placeholder.webp",
         cop: "21280",
         rne: "02828",
         trascendencia: [
@@ -34,7 +32,6 @@ const docentesData = [
         slug: "claudia-arce",
         nombre: "Dra. Claudia Pilar Arce Toribio",
         especialidad: "Especialista en Endodoncia",
-        foto: "/images/placeholder.webp",
         cop: "45400",
         rne: "4231",
         trascendencia: [

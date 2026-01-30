@@ -30,7 +30,7 @@ const CursosPage = () => {
                         >
                             <div className="relative h-60 w-full overflow-hidden">
                                 <Image
-                                    src={`/images/placeholder.webp`}
+                                    src={`/images/courses/${curso.slug}-thumbnail.jpg`}
                                     alt={curso.titulo}
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-700"
