@@ -69,7 +69,7 @@ const AboutUs = () => {
 
                         <div className="relative w-full h-full rounded-[40px] overflow-hidden shadow-2xl">
                             <Image
-                                src="/images/tienes-una-consulta.png"
+                                src="/images/nuestra-institucion.jpg"
                                 alt="Nuestro equipo de trabajo"
                                 fill
                                 className="object-cover"
