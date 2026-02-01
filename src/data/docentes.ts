@@ -1,6 +1,24 @@
 const docentesData = [
     {
         id: 1,
+        slug: "luis-cueva",
+        nombre: "Dr. Luis Alberto Cueva Principe",
+        especialidad: "Radiologia bucal y maxilofacial",
+        cop: "32198",
+        rne: "02486",
+        trascendencia: [
+            "Especialista en Radiología Bucal y Maxilofacial de la Universidad de San Martin de Porres (USMP), Lima-Perú.",
+            "Magíster en Estomatología de la Universidad Científica del Sur (UCSUR), Lima-Perú.",
+            "Docente de Radiología Bucal y Maxilofacial de la Universidad de San Martin de Porres (USMP), Lima-Perú.",
+            "Docente de Radiología Bucal y Maxilofacial de la Universidad Peruana de Ciencias Aplicadas (UPC) 2020-2022, Lima-Perú.",
+            "Docente de Radiología Bucal y Maxilofacial del Instituto Latinoamericano de altos estudios en Estomatología (ILAE), Lima-Perú.",
+            "Miembro de la International American Dental Maxillofacial Radiology (IADMFR).",
+            "Miembro de la Asociación Latinoamericana de Radiología e Imagenología Dentomaxilofacial (ALARID).",
+            "Director general de Imagenología & Planificación Dentomaxilofacial (IPD) 2025."
+        ]
+    },
+    {
+        id: 2,
         slug: "joseph-angulo",
         nombre: "Dr. Joseph Angulo Asuncion",
         especialidad: "Periodoncia e Implantología",
@@ -13,7 +31,7 @@ const docentesData = [
         ]
     },
     {
-        id: 2,
+        id: 3,
         slug: "christian-gomez",
         nombre: "Dr. Christian Esteban Gomez Carrion",
         especialidad: "Rehabilitación Oral",
@@ -28,7 +46,7 @@ const docentesData = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         slug: "claudia-arce",
         nombre: "Dra. Claudia Pilar Arce Toribio",
         especialidad: "Especialista en Endodoncia",
@@ -40,7 +58,7 @@ const docentesData = [
             "Magíster en Investigación en Odontología – Universidad Internacional de Catalunya (UIC), España",
             "Intercambio académico en el Nicklaus Children's Hospital (Miami), área clínica y formativa (2018)"
         ]
-    }
+    },
 ];
 
 export default docentesData;

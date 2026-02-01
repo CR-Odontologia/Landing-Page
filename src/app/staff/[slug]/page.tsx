@@ -54,12 +54,12 @@ const DocenteDetailPage = () => {
 
                         <div className="mt-8 grid grid-cols-2 gap-4">
                             <div className="bg-gray-100 p-6 rounded-3xl text-center border-b-4 border-[#d7af58]">
-                                <p className="text-gray-400 text-[10px] font-black uppercase tracking-widest mb-1">Especialidad</p>
-                                <p className="text-[#022249] font-black text-xl tracking-tighter">COP {docente.cop}</p>
+                                <p className="text-gray-400 text-[10px] font-black uppercase tracking-widest mb-1">COP</p>
+                                <p className="text-[#022249] font-black text-xl tracking-tighter">{docente.cop}</p>
                             </div>
                             <div className="bg-gray-100 p-6 rounded-3xl text-center border-b-4 border-[#d7af58]">
-                                <p className="text-gray-400 text-[10px] font-black uppercase tracking-widest mb-1">Especialidad</p>
-                                <p className="text-[#022249] font-black text-xl tracking-tighter">RNE {docente.rne}</p>
+                                <p className="text-gray-400 text-[10px] font-black uppercase tracking-widest mb-1">RNE</p>
+                                <p className="text-[#022249] font-black text-xl tracking-tighter">{docente.rne}</p>
                             </div>
                         </div>
                     </motion.div>
