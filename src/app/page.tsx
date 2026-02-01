@@ -2,6 +2,7 @@ import Hero from "@/components/sections/Hero";
 import AboutUs from "@/components/sections/AboutUs";
 import PastEditions from "@/components/sections/PastEditions";
 import Contact from "@/components/sections/Contact";
+import Alliances from "@/components/sections/Alliances";
 
 export const metadata = {
     title: "CR Formación Especializada | Especialización y Postgrado Odontológico | CR Odontologia",
@@ -16,6 +17,7 @@ export default function Home() {
         {/*
         <PastEditions/>
         */}
+        <Alliances/>
         <Contact/>
       </main>
   );
