@@ -17,7 +17,7 @@ export async function POST(req: Request) {
         const fields: any = {
             vads_action_mode: "INTERACTIVE",
             vads_amount: Math.round(amount * 100).toString(),
-            vads_ctx_mode: "TEST",
+            vads_ctx_mode: "PRODUCTION",
             vads_currency: "840",
             vads_page_action: "PAYMENT",
             vads_payment_config: "SINGLE",
