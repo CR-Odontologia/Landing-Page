@@ -16,7 +16,7 @@ const CursoIndividual = () => {
     const router = useRouter();
 
     const [openModulos, setOpenModulos] = useState<number[]>([0]);
-
+    const [loading, setLoading] = useState(false);
     const curso = cursosData.find((c) => c.slug === params.slug);
 
     if (!curso) {
@@ -31,9 +31,49 @@ const CursoIndividual = () => {
         }
     };
 
-    const handleMatricula = () => {
-        console.log("Iniciando proceso de pago con Izipay para:", curso.titulo);
-        alert("El sistema de pagos Izipay se activará próximamente.");
+    const handleMatricula = async () => {
+        setLoading(true);
+
+        try {
+            const amount = incluyeFacop
+                ? curso.infoGeneral.precio.ofertaFacop
+                : curso.infoGeneral.precio.ofertaBase;
+
+
+            const res = await fetch('/api/pay', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    amount: amount,
+                    cursoNombre: curso.titulo
+                })
+            });
+
+            if (!res.ok) throw new Error("Error al obtener la firma de pago");
+
+            const data = await res.json();
+
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'https://secure.micuentaweb.pe/vads-payment/';
+
+            Object.keys(data).forEach(key => {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = data[key];
+                form.appendChild(input);
+            });
+
+            document.body.appendChild(form);
+            form.submit();
+
+        } catch (error) {
+            console.error("Error en el proceso de matrícula:", error);
+            alert("Hubo un problema al conectar con la pasarela de pagos. Por favor, intenta de nuevo.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -217,9 +257,17 @@ const CursoIndividual = () => {
 
                                 <button
                                     onClick={handleMatricula}
-                                    className="w-full bg-[#022249] text-white py-5 rounded-full font-black text-lg uppercase tracking-tighter hover:bg-[#d7af58] transition-all active:scale-95 shadow-xl"
+                                    disabled={loading}
+                                    className="w-full bg-[#022249] text-white py-5 rounded-full font-black text-lg uppercase tracking-tighter hover:bg-[#d7af58] transition-all active:scale-95 shadow-xl disabled:opacity-50 flex items-center justify-center gap-2"
                                 >
-                                    Matricularse ahora
+                                    {loading ? (
+                                        <>
+                                            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                                            Procesando...
+                                        </>
+                                    ) : (
+                                        "Matricularse ahora"
+                                    )}
                                 </button>
 
                                 <div className="space-y-4 pt-6 border-t border-gray-100">
