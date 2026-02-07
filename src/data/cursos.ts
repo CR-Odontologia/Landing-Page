@@ -3,6 +3,7 @@ const cursosData = [
         id: 1,
         slug: "imagenologia-implantologia-periodoncia",
         titulo: "Domina la Imagenología avanzada en Implantología y Periodoncia",
+        status: "CLOSE",
         tag: "Curso Virtual",
         infoGeneral: {
             inicio: "02/02/2026",
@@ -37,6 +38,7 @@ const cursosData = [
         id: 2,
         slug: "radiologia-rehabilitacion-oral",
         titulo: "Radiología Bucal y Maxilofacial Aplicada a la Rehabilitación Oral",
+        status: "CLOSE",
         tag: "Curso Virtual",
         infoGeneral: {
             inicio: "02/02/2026",
@@ -71,6 +73,7 @@ const cursosData = [
         id: 3,
         slug: "imagenologia-clinica-endodoncia",
         titulo: "Imagenología Diagnóstica Avanzada para la Práctica Clínica en Endodoncia",
+        status: "CLOSE",
         tag: "Curso Virtual",
         infoGeneral: {
             inicio: "03/02/2026",

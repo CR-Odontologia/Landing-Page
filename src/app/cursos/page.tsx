@@ -8,6 +8,8 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 import  cursosData  from "@/data/cursos";
 
 const CursosPage = () => {
+    const cursosVisibles = cursosData.filter(curso => curso.id !== 999);
+
     return (
         <main className="pt-28 pb-20 bg-gray-50 min-h-screen">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +24,7 @@ const CursosPage = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {cursosData.map((curso) => (
+                    {cursosVisibles.map((curso) => (
                         <Link
                             key={curso.id}
                             href={`/cursos/${curso.slug}`}
@@ -36,13 +38,20 @@ const CursosPage = () => {
                                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                                     priority
                                 />
-                                <div className="absolute top-5 left-5 bg-[#022249] text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">
-                                    Matrículas Abiertas
-                                </div>
+
+                                {curso.status === "OPEN" ? (
+                                    <div className="absolute top-5 left-5 bg-[#022249] text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">
+                                        Matrículas Abiertas
+                                    </div>
+                                ) : (
+                                    <div className="absolute top-5 left-5 bg-red-600 text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">
+                                        Inscripciones Cerradas
+                                    </div>
+                                )}
                             </div>
 
                             <div className="p-8 flex-1 flex flex-col">
-                                <h3 className="text-xl md:text-2xl font-black text-[#022249] mb-6 leading-tight min-h-[80px]">
+                                <h3 className={`text-xl md:text-2xl font-black text-[#022249] mb-6 leading-tight min-h-[80px] ${curso.status === "CLOSE" ? 'opacity-50' : ''}`}>
                                     {curso.titulo}
                                 </h3>
 
@@ -65,22 +74,17 @@ const CursosPage = () => {
                                     <div>
                                         <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest mb-1">Desde</p>
                                         <div className="flex items-baseline gap-2">
-
                                             <p className="text-sm font-bold text-gray-400 line-through">
                                                 ${curso.infoGeneral.precio.original}
                                             </p>
-
                                             <p className="text-4xl font-black text-[#d7af58]">
                                                 <span className="text-lg font-bold mr-1">$</span>
                                                 {curso.infoGeneral.precio.ofertaBase}
                                             </p>
                                         </div>
-                                        <p className="text-[9px] text-[#022249] font-bold uppercase tracking-tighter mt-1 opacity-70">
-                                            *Precio sin certificación FACOP
-                                        </p>
                                     </div>
 
-                                    <div className="w-14 h-14 bg-[#022249] rounded-2xl flex items-center justify-center text-white group-hover:bg-[#d7af58] transition-all duration-500 shadow-lg">
+                                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-white transition-all duration-500 shadow-lg ${curso.status === "OPEN" ? 'bg-[#022249] group-hover:bg-[#d7af58]' : 'bg-gray-300'}`}>
                                         <ArrowRight size={28} />
                                     </div>
                                 </div>
@@ -92,5 +96,4 @@ const CursosPage = () => {
         </main>
     );
 };
-
 export default CursosPage;
