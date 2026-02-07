@@ -159,7 +159,7 @@ export default function ContactoPage() {
 
                         <div className="w-full h-[400px] rounded-[40px] overflow-hidden shadow-2xl border-8 border-white">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15609.431257404396!2d-77.00067645!3d-12.0188173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c58a69a2d61d%3A0x6a05e5d38f8f8f8f!2sSan%20Juan%20de%20Lurigancho!5e0!3m2!1ses-419!2spe!4v1704560000000!5m2!1ses-419!2spe"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d687.8395613481033!2d-76.98458336967126!3d-12.120428981589704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2spe!4v1770475964820!5m2!1ses-419!2spe"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
