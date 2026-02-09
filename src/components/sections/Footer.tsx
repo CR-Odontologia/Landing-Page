@@ -62,7 +62,7 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-sm text-gray-300">
                                 <MapPin size={18} className="text-[#d7af58] shrink-0" />
-                                <span>JR. LOS SOCIOLOGOS MZA. E LOTE. 11 LIMA - LIMA - SAN JUAN DE LURIGANCHO</span>
+                                <span>AV. ALEJANDRO VELASCO ASTETE NRO. 1429 URB. PANCHO FIERRO LIMA - LIMA - SANTIAGO DE SURCO</span>
                             </li>
                             <li className="flex items-center gap-3 text-sm text-gray-300">
                                 <Phone size={18} className="text-[#d7af58]" />
