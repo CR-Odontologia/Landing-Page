@@ -59,6 +59,20 @@ const docentesData = [
             "Intercambio académico en el Nicklaus Children's Hospital (Miami), área clínica y formativa (2018)"
         ]
     },
+    {
+        id: 5,
+        slug: "freddy-tolentino",
+        nombre: "Dr. Freddy Antonio Tolentino Solis ",
+        especialidad: "Especialista en Ortodoncia",
+        cop: "21935",
+        rne: "02198",
+        trascendencia: [
+            "Especialista en Ortodoncia y ortopedia Maxilar UNMSM",
+            "Maestría en Docencia e Investigación en Estomatologia UNFV",
+            "Docente de Ortodoncia en UPC , UPSJB",
+            "Entrenamiento en Anclaje Esquelético y MARPE"
+        ]
+    },
 ];
 
 export default docentesData;
