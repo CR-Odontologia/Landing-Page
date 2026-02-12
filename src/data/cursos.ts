@@ -1,5 +1,7 @@
 const cursosData = [
+    /*
     {
+
         id: 1,
         slug: "radiologia-rehabilitacion-oral",
         titulo: "Radiología Bucal y Maxilofacial Aplicada a la Rehabilitación Oral",
@@ -69,6 +71,7 @@ const cursosData = [
             { modulo: 8, titulo: "Control, Seguimiento y Pronóstico Endodóntico", temas: ["Evaluación postoperatoria inmediata y tardía", "Seguimiento de lesiones periapicales", "Radiografía vs CBCT en controles", "Consideraciones éticas, legales y radioprotección"] }
         ]
     },
+    */
     {
         id: 3,
         slug: "tomografia-cone-beam",
